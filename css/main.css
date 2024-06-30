@@ -27,17 +27,17 @@ html {
     --sec-pad: 150px 0;
     --w: 90%; */
 }
-  
 
 body {
     font-family:var(--ff-ss-two);
-    /* font-size: 1rem; */
     background-color: var(--background);
 }
 
 h1, h2, h3, nav {
     text-transform: uppercase;
     font-family:var(--ff-ss);
+    font-weight: bold;
+    
 } 
 
 .btn {
@@ -47,6 +47,7 @@ h1, h2, h3, nav {
     background-color: var(--white);
     border: none;
     cursor: pointer; 
+    font-weight: bold;
 }
 
 h1 {
@@ -65,7 +66,7 @@ h3 {
 }
 
 p {
-    font-size: 1rem;
+    font-size: 16px;
 }
 
 hr {
@@ -76,27 +77,21 @@ hr {
    ================================================== */
 
 /* sets width for the main container of the body*/
-.container {
-    width: 100%; 
-}
-
-/* class that apply edge-to-edge bleed in all the sections */
 .wrapper {
-    margin: 0 auto;
-    /* padding: 0 1em; */
-    max-width: var(--mw);
+    width: 100%; 
 }
 
 /* ---------------- HEADER ----------------- */
 .container-header {
     background-color: var(--black);
     display: flex; 
+    flex-direction: column;
 }
 
 .logo {
     display: flex;
     justify-content: center;
-    margin: 20px;
+    padding: 20px;
 }
 
 header nav ul {
@@ -104,6 +99,7 @@ header nav ul {
     display: flex; /* order the list elements of the nav to inline order */
     padding-left: 0;
     margin: 20px;
+    justify-content: center;
 }
 
 header nav ul a {
@@ -119,7 +115,7 @@ header nav ul a:focus {
   background-color: var(--light);
   color: var(--white);
 }
-
+/* Container-Hero */
 .container-hero {
     background-image: url("../images/hero-background.jpg");
     background-repeat: no-repeat;
@@ -148,11 +144,11 @@ header nav ul a:focus {
 }
 
 /* ---------------- MAIN ----------------- */
-/* Container Gallery */
+/* Container Welcome */
 .container-welcome {
     padding: 0 10px;
 }
-
+/* Container Gallery */
 .gallery {
     display: flex;
     flex-direction: column;
@@ -178,7 +174,7 @@ header nav ul a:focus {
 }
 
 .service-container{
-    max-width: 500px;
+    width: 500px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -191,7 +187,7 @@ header nav ul a:focus {
 
 }
 .service img {
-    width: 50%;
+    width: 100%;
 }
 
 /* Container Our Menu and Locations */
@@ -324,4 +320,86 @@ header nav ul a:focus {
     color: var(--white);
 }
 
+/* ==================================================
+                    TABLET - 768PX and Above                
+   ================================================== */
+@media screen and (min-width:768px){
+    h1 {
+        font-size: 2.986rem;
+    }
+    
+    h2 {
+        font-size: 2.488rem;
+    }
+    
+    h3 {
+        font-size: 1.728rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
 
+    /* Container Welcome */
+    .hero {
+        padding: 0 80px;
+    }
+
+    /* Container Gallery */
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 20px;
+    }  
+    .sub-gallery {
+        margin-top: 0;
+    }
+    /* Container Offer */
+    .service-container{
+        width: 700px;
+        display: flex;
+        flex-direction: row;
+    }
+    .service {
+        padding: 40px;
+    
+    }
+    .service img {
+        width: auto;
+        height: 250px;
+    }
+}
+
+/* ==================================================
+                    DESKTOP - 1100PX and Above                
+   ================================================== */
+@media screen and (min-width:1100px){
+    /* Max-width */
+    .wrapper {
+        margin: 0 auto;
+        padding: 0;
+        max-width: var(--mw);
+    }
+
+    h1 {
+        font-size: 3.815rem;
+    }
+    
+    h2 {
+        font-size: 3.052rem;
+    }
+    
+    h3 {
+        font-size: 1.953rem;
+    }
+    
+    p {
+        font-size: 1rem;
+    }
+
+    /* Container Welcome */
+    .hero {
+        padding: 0 200px;
+    }
+}
