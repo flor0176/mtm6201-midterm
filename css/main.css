@@ -23,12 +23,10 @@ html {
     --ff-ss: "Lato", sans-serif;
     --ff-ss-two: "Karla", sans-serif;
     --mw: 1200px;
-    /* --fc: var(--dark);
-    --sec-pad: 150px 0;
-    --w: 90%; */
 }
 
 body {
+    margin: 0;
     font-family:var(--ff-ss-two);
     background-color: var(--background);
 }
@@ -36,18 +34,19 @@ body {
 h1, h2, h3, nav {
     text-transform: uppercase;
     font-family:var(--ff-ss);
-    font-weight: bold;
+    font-weight: 700;
     
 } 
 
 .btn {
     font-family:var(--ff-ss-two);
+    font-size: 1rem;
+    font-weight: 800;
     text-transform: uppercase;
     padding: .75em 1.25em;
     background-color: var(--white);
     border: none;
     cursor: pointer; 
-    font-weight: bold;
     transition: background-color 0.3s ease, border-radius 0.3s ease;
 }
 
@@ -62,8 +61,6 @@ h1, h2, h3, nav {
     border-radius: 12px;
 }
 
-
-
 h1 {
     color: var(--white);
     font-size: 2.027rem;
@@ -75,16 +72,25 @@ h2 {
 }
 
 h3 {
-    color: var(--light);
+    color: var(--black);
     font-size: 1.424rem;
 }
 
 p {
     font-size: 16px;
+    line-height: 20px; 
 }
 
 hr {
     color: var(--white); 
+}
+
+/* class of paragraph of sections */
+.text {
+    color: #d69e3d;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 1.2rem;
 }
 
 /*--------------SKIP LINKS---------------*/
@@ -161,14 +167,18 @@ button.bounce {
 .logo {
     display: flex;
     justify-content: center;
-    padding: 20px;
+    padding: 15px;
+}
+
+.logo img {
+    width: 250px;
 }
 
 .main-nav ul {
     list-style: none; /* remove styles of list */
-    display: flex; /* order the list elements of the nav to inline order */
+    display: flex; 
     padding-left: 0;
-    margin: 20px;
+    margin: 10px;
     justify-content: center;
 }
 
@@ -190,14 +200,15 @@ button.bounce {
     background-image: url("../images/hero-background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: 90% 40%;
-    height: 500px;
+    background-position: 90% 45%;
+    height: 450px;
     width: 100%;
     display: flex;
+    margin-bottom: 70px;
 }
 
 .hero {
-    background-color:#222222b2;
+    background-color:#181818ae;
     height: 100%;
     width: 100%;
     display: flex;
@@ -208,16 +219,27 @@ button.bounce {
     padding: 0 30px;
 }
 
+.hero h1 {
+    margin: 10px;
+}
+
 .hero p {
     color:var(--white);
     padding: 0 50px;
+    margin-bottom: 30px;
 }
 
 /* ---------------- MAIN ----------------- */
 /* Container Welcome */
 .container-welcome {
     padding: 0 10px;
+    margin-bottom: 70px;
 }
+
+.container-welcome h2 {
+    padding-right: 100px;
+}
+
 /* Container Gallery */
 .gallery {
     display: flex;
@@ -232,7 +254,7 @@ button.bounce {
     margin-top: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
     gap: 20px;
 }
 
@@ -241,10 +263,17 @@ button.bounce {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 70px;
+}
+.container-offer p {
+    margin: 0px;
+}
+.container-offer h2, h3 {
+    margin: 10px;
 }
 
 .service-container{
-    width: 500px;
+    width: 400px;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -254,10 +283,12 @@ button.bounce {
 .service {
     padding-top:20px;
     padding-bottom:20px;
+    margin: 20px;
 
 }
 .service img {
     width: 100%;
+    height: 170px;
 }
 
 /* Container Our Menu and Locations */
@@ -266,11 +297,17 @@ button.bounce {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
-    height: 700px;
+    height: 650px;
     width: 100%;
     display: flex;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 90px;
+}
+
+.container-explore p {
+    margin: 0px;
+}
+.container-explorer h2, h3 {
+    margin: 10px;
 }
 
 .explore {
@@ -287,15 +324,13 @@ button.bounce {
 
 .menu,
 .locations {
-    padding-top: 20px;
-    padding-bottom: 20px;
-
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 .menu h2,
 .locations h2{
     color: var(--white);
-
 }
 
 #clear-btn{
@@ -305,9 +340,17 @@ button.bounce {
 }
 
 /* Container About Us */
-
 .container-about {
     padding: 0 10px;
+    margin-bottom: 70px;
+}
+
+.container-about p {
+    margin-top: 0px;
+}
+.container-about h2 {
+    margin: 0px;
+    padding-bottom: 20px;
 }
 
 .about {
@@ -354,26 +397,47 @@ button.bounce {
     height: 500px;
     display: flex;
     flex-direction: column;
+    
 }
 
-.testimonial img{
+.cover {
+    background-color:#181818ae;
+    height: 100%;
     width: 100%;
-    height: 500px;
+    background-size: cover;
+}
+
+.testimonial img {
+    width: 100%;
+    /* height: 50vh; */
+    height: 100%; 
     object-fit: cover;
-    object-position:top;
+    /* object-position:top; */
+}
+
+.testimonial:nth-child(1) img{
+    object-position:40% 50%;
+}
+
+.testimonial:nth-child(2) img{
+    object-position:90% 5%;
+}
+
+.testimonial:nth-child(3) img{
+    object-position:90% 2%;
 }
 
 .testimonial p {
     color: var(--white);
-    padding: 0 50px;
+    padding: 0 20px;
 }
 
-.customer {
+p.customer {
     color: var(--light);
-    padding: 0 50px;
+    padding: 0 20px;
     text-transform: uppercase;
-    font-size: 1.802rem;
 }
+
 .review {
     position: relative;
     top: -140px;
@@ -425,6 +489,7 @@ button.bounce {
     .sub-gallery {
         margin-top: 0;
     }
+
     /* Container Offer */
     .service-container{
         width: 700px;
