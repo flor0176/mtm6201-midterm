@@ -379,12 +379,16 @@ button.bounce {
     display: grid;
     grid-template-columns: 1fr;
     padding: 40px 10px;
-    /* margin-top: 40px;  
-    margin-bottom: 40px;     */
+}
+
+.container-testimonials p {
+    margin: 0;
 }
 
 .container-testimonials h2{
     color:var(--white);
+    margin-top: 10px;
+    padding-right: 100px;
 }
 
 .customers-testimonials {
@@ -474,42 +478,145 @@ p.customer {
         font-size: 1rem;
     }
 
-    /* Container Welcome */
+    /* Container Hero */
     .hero {
         padding: 0 80px;
+    }
+    .container-hero {
+        margin-bottom: 100px;
+    }
+
+    /* Container Welcome */
+    .container-welcome {
+        padding: 0 20px;
+        margin-bottom: 100px;
+    }
+
+    .container-welcome h2 {
+        padding-right: 250px;
+        margin-top: 0;
     }
 
     /* Container Gallery */
     .gallery {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr;
         gap: 20px;
     }  
+
     .sub-gallery {
         margin-top: 0;
     }
 
-    /* Container Offer */
-    .service-container{
-        width: 700px;
+    /* Container What we offer */
+    .container-offer {
+        margin-bottom: 70px;
+    }
+
+    .service-container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(6,1fr);
+        grid-template-rows: repeat(2,1fr);
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+      }
+
+      .service-container .service:nth-child(1){
+        grid-column: 2 / span 2;
+      }
+      .service-container .service:nth-child(2){
+        grid-column: 4 / span 2;
+      }
+      .service-container .service:nth-child(3){
+        grid-column: 3 / span 2;
+      }
+
+     .service { 
+        width: 400px;
+        padding: 10px
+
+    }  
+    .service img {
+        width: 150px;
+        height: auto;
+    }
+
+    /* Container Our Menu and Locations */
+    .container-explore {
+        display: flex;
+        margin-bottom: 100px;
+    }
+
+    .explore {
         display: flex;
         flex-direction: row;
     }
-    .service {
+
+    .menu,
+    .locations {
         padding: 40px;
+    }
+
+   /* Container About Us */
+    .container-about {
+        padding: 0 20px;
+        margin-bottom: 100px;
+    }
+
+    .about {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .about-img img{
+        width: 400px;
+        height: auto;
+
+    }
+
+    .about-story {
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    /* Container Testimonials  */
+    .container-testimonials  {
+        padding-bottom: 20px;
+    }
+
+    .container-testimonials p {
+        padding-top: 90px;
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    .container-testimonials h2{
+        padding-left: 20px;
+        padding-right: 300px;
+    }
+
+    .customers-testimonials {
+        padding: 20px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows:auto;
+        gap: 20px;
+    }
     
+    .testimonial p {
+        padding: 7px 20px;
     }
-    .service img {
-        width: auto;
-        height: 250px;
-    }
+    
 }
 
 /* ==================================================
                     DESKTOP - 1100PX and Above                
    ================================================== */
-@media screen and (min-width:1100px){
+@media screen and (min-width:1100px) {
+
     /* Max-width */
     .wrapper {
         margin: 0 auto;
@@ -532,9 +639,57 @@ p.customer {
     p {
         font-size: 1rem;
     }
-
-    /* Container Welcome */
-    .hero {
-        padding: 0 160px;
+    
+    /* Header */
+    .container-header {
+        padding: 0 90px;
+        display: flex; 
+        flex-direction: row;
+        justify-content: center;
     }
+    
+    .logo {
+        padding: 15px;
+    }
+    
+    
+    .main-nav ul {
+        margin-left: 350px;
+    }
+    
+    /* Container Hero */
+    .hero {
+        padding: 0 250px;
+    }
+    
+    /* Container Welcome */
+    .container-welcome {
+        padding: 0 150px;
+    }
+
+
+    /* Container What we offer */
+    .container-offer {
+        margin-bottom: 100px;
+        
+    }
+
+    .service-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+    }
+   
+    .service { 
+        width: 600px;
+        padding-top:10px;
+        padding-bottom:10px;
+    }  
+    .service img {
+        width: 200px;
+        height: 100%;
+    }
+
 }
